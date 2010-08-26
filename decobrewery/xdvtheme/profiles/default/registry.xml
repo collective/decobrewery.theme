@@ -1,0 +1,22 @@
+<registry>
+  <record field="enabled"
+          interface="collective.xdv.interfaces.ITransformSettings"
+          name="collective.xdv.interfaces.ITransformSettings.enabled">
+    <value>True</value>
+  </record>
+  <record field="theme"
+          interface="collective.xdv.interfaces.ITransformSettings"
+          name="collective.xdv.interfaces.ITransformSettings.theme">
+    <value>python://decobrewery.xdvtheme/static/index.html</value>
+  </record>
+  <record field="rules"
+          interface="collective.xdv.interfaces.ITransformSettings"
+          name="collective.xdv.interfaces.ITransformSettings.rules">
+    <value>python://decobrewery.xdvtheme/rules.xml</value>
+  </record>
+  <record field="absolute_prefix"
+          interface="collective.xdv.interfaces.ITransformSettings"
+          name="collective.xdv.interfaces.ITransformSettings.absolute_prefix">
+    <value>++resource++decobrewery.static</value>
+  </record>
+</registry>

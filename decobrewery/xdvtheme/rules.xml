@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/xdv">
+    <replace content='/html/head/title' theme='/html/head/title' />
+
+    <append  content="/html/head/base"   theme="/html/head" />
+    <append  content="/html/head/meta"   theme="/html/head" />
+    <append  content='/html/head/style'  theme='/html/head' />
+    <append  content='/html/head/script' theme='/html/head' />
+    <append  content="/html/head/link"   theme="/html/head" />
+
+    <drop if-content="/html/head/style"  theme="/html/head/style" />
+    <drop if-content="/html/head/script" theme="/html/head/script" />
+    <drop if-content="/html/head/link"   theme="/html/head/link" />
+
+    <!-- Copy over the id/class attributes on the body tag, this is important
+         for per-section styling -->
+    <prepend content="/html/body/@class" theme="/html/body" />
+    <prepend content="/html/body/@id"    theme="/html/body" />
+    <prepend content="/html/body/@dir"   theme="/html/body" />
+
+    <!-- Site actions -->
+    <copy content="//*[@id='portal-siteactions']/li" theme="//*[@id='actions']" />
+
+    <!-- Global navigation -->
+    <copy content='//*[@id="portal-globalnav"]/li' theme='//*[@id="global-navigation"]' />
+
+    <!-- Breadcrumbs -->
+    <copy content='//*[@id="portal-breadcrumbs"]/*' theme='//*[@id="breadcrumbs"]' />
+
+    <!-- Document Content -->
+    <copy content="//*[@id='content']/*" theme="//*[@id='document-content']" />
+    <before content="//*[@id='edit-bar']" theme="//*[@id='document-content']" />
+
+    <!-- Columns -->
+    <copy content="//*[@id='portal-column-one']/*" theme="//*[@id='column-one']" />
+    <copy content="//*[@id='portal-column-two']/*" theme="//*[@id='column-two']" />
+
+    <!-- Footer -->
+    <append content="//*[@id='kss-spinner']" theme="/html/body" />
+
+</rules>
