@@ -24,6 +24,7 @@ setup(name='decobrewery.xdvtheme',
       install_requires=[
           'setuptools',
           'collective.xdv',
+          'plonetheme.wireframe',
       ],
       entry_points="""
       """,

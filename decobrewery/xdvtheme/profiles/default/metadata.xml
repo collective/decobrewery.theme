@@ -3,5 +3,6 @@
   <version>1000</version>
   <dependencies>
     <dependency>profile-collective.xdv:default</dependency>
+    <dependency>profile-plonetheme.wireframe:default</dependency>
   </dependencies>
 </metadata>

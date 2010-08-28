@@ -9,6 +9,7 @@
   <five:registerPackage package="." initialize=".initialize" />
 
   <include package="collective.xdv" />
+  <include package="plonetheme.wireframe" />
 
   <i18n:registerTranslations directory="locales" />
 
@@ -26,7 +27,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="DecoBrewery"
+      title="Deco Brewery XDV Theme"
       directory="profiles/default"
       description='Extension profile for the "Deco Brewery" Plone theme.'
       provides="Products.GenericSetup.interfaces.EXTENSION"

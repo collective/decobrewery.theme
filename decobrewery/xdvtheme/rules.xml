@@ -19,21 +19,21 @@
     <prepend content="/html/body/@dir"   theme="/html/body" />
 
     <!-- Site actions -->
-    <copy content="//*[@id='portal-siteactions']/li" theme="//*[@id='actions']" />
+    <copy content="//*[@id='portal-siteactions']/li" theme="//*[@id='secondary']" />
 
     <!-- Global navigation -->
-    <copy content='//*[@id="portal-globalnav"]/li' theme='//*[@id="global-navigation"]' />
+    <copy content='//*[@id="portal-globalnav"]/li' theme='//*[@id="navlist"]' />
 
     <!-- Breadcrumbs -->
     <copy content='//*[@id="portal-breadcrumbs"]/*' theme='//*[@id="breadcrumbs"]' />
 
     <!-- Document Content -->
-    <copy content="//*[@id='content']/*" theme="//*[@id='document-content']" />
-    <before content="//*[@id='edit-bar']" theme="//*[@id='document-content']" />
+    <copy content="//*[@id='content']/*" theme="//*[@id='content']" />
+    <before content="//*[@id='edit-bar']" theme="//*[@id='frame']" />
 
     <!-- Columns -->
-    <copy content="//*[@id='portal-column-one']/*" theme="//*[@id='column-one']" />
-    <copy content="//*[@id='portal-column-two']/*" theme="//*[@id='column-two']" />
+    <copy content="//*[@id='portal-column-one']/*" theme="//*[@id='kolom01']" />
+    <copy content="//*[@id='portal-column-two']/*" theme="//*[@id='kolom03']" />
 
     <!-- Footer -->
     <append content="//*[@id='kss-spinner']" theme="/html/body" />
