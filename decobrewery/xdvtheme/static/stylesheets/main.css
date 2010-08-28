@@ -22,7 +22,7 @@ body {
 }
 /* for Internet Explorer */
 /*\*/
-* html #frame, * html #kolom01 {
+* html #frame, * html #column01 {
 min-height: 342px;
 }
 /**/
@@ -41,7 +41,7 @@ min-height: 342px;
 }
 	
 		
-#kolom01 {
+#column01 {
 	width: 230px;
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 20px;
@@ -49,7 +49,7 @@ min-height: 342px;
 	background: #ffffff;
 	min-height: 342px;
 }
-#kolom02 {
+#column02 {
 	width: 480px;
 	padding: 30px 0px 0px 0px;
 	margin: 0px 0px 10px 20px;
@@ -57,7 +57,7 @@ min-height: 342px;
 	min-height: 342px;
 }
 
-#kolom03 {
+#column03 {
 	width: 190px;
 	padding:20px 0px 0px 0px;
 	margin: 0px 0px 0px 20px;
