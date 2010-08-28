@@ -32,8 +32,8 @@
     <before content="//*[@id='edit-bar']" theme="//*[@id='frame']" />
 
     <!-- Columns -->
-    <copy content="//*[@id='portal-column-one']/*" theme="//*[@id='kolom01']" />
-    <copy content="//*[@id='portal-column-two']/*" theme="//*[@id='kolom03']" />
+    <copy content="//*[@id='portal-column-one']/*" theme="//*[@id='column01']" />
+    <copy content="//*[@id='portal-column-two']/*" theme="//*[@id='column03']" />
 
     <!-- Footer -->
     <append content="//*[@id='kss-spinner']" theme="/html/body" />
