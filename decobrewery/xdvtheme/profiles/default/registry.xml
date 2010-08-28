@@ -108,4 +108,17 @@
     </field>
     <value>python://decobrewery.xdvtheme/static/detailpage.html</value>
   </record>
+    <record field="alternate_themes" interface="collective.xdv.interfaces.ITransformSettings" name="collective.xdv.interfaces.ITransformSettings.alternate_themes">
+    <field type="plone.registry.field.List">
+      <description>Define alternate themes and rules files depending on a given path. Should be of a form 'path theme rules' (or 'path rules' with xdv 0.4), where path may use a regular expression syntax, theme is a file path or URL to the theme template and rule is a file path to the rules file.</description>
+      <required>False</required>
+      <title>Alternate themes</title>
+      <value_type type="plone.registry.field.TextLine">
+        <title>Theme</title>
+      </value_type>
+    </field>
+    <value>
+      <element>^/$|python://decobrewery.xdvtheme/static/homepage.html|python://decobrewery.xdvtheme/rules.xml</element>
+    </value>
+  </record>
 </registry>
