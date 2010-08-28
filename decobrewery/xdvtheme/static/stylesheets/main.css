@@ -1,9 +1,29 @@
+/* @group CSS Reset */
+
+/* Remove implicit browser styles to have a neutral starting point:
+   - No elements should have implicit margin/padding
+   - No underline by default on links (we add it explicitly in the body text)
+   - When we want markers on lists, we will be explicit about it, and they render inline by default
+   - Browsers are inconsistent about hX/pre/code, reset
+   - Linked images should not have borders
+   */
+
+* { margin: 0; padding: 0; }
+* ul,ol { list-style:none; }
+* li { display: inline; }
+* h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
+* a img,:link img,:visited img { border:none }
+a { outline: none; }
+table { border-spacing: 0; }
+img { vertical-align: text-bottom; }
+
+
+/* @end */
+
+
 body {
-	text-align: center;
 	font-family: Verdana;
-	margin: 0 0 0 0; 
 	background-color: #ffffff;
-	padding:0 0 0 0;
 }
 
 .noScreen {
@@ -12,17 +32,15 @@ body {
 
 #frame {
 	width: 960px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 0px;
-	padding: 0px 0px 0px 0px;
-	text-align: left;
+	margin: 0 auto;
 	background: #fff;
 	min-height: 342px;
 }
+
+
 /* for Internet Explorer */
 /*\*/
-* html #frame, * html #column01 {
+* html #frame, * html #column01, * html #column03 {
 min-height: 342px;
 }
 /**/
@@ -37,34 +55,27 @@ min-height: 342px;
 #navig {
 	background: #844b0c;
 	height: 24px;	
-	padding: 0px 0px 0px 0px;
+	margin-bottom: 20px;
 }
 	
 		
 #column01 {
 	width: 230px;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 20px;
+	margin: 0px 20px;
 	float: left;
-	background: #ffffff;
+	background: #ffffff;	
 	min-height: 342px;
-}
-#column02 {
-	width: 480px;
-	padding: 30px 0px 0px 0px;
-	margin: 0px 0px 10px 20px;
-	float: left;
-	min-height: 342px;
-}
 
+}
 #column03 {
 	width: 190px;
-	padding:20px 0px 0px 0px;
 	margin: 0px 0px 0px 20px;
-	float: left;
+	float: right;
 	background: #fff;
-	
-
+	min-height: 342px;	
+}
+#column02 {
+	margin: 0 210px 0 270px;
 }
 #item {
 	margin-bottom:40px;	
@@ -72,41 +83,58 @@ min-height: 342px;
 #footer {
 	float:left;
 	width:960px;
+	height: 20px;
 	background: #fff;
 	border-top: 3px solid #844b0c;
-	height: 20px;
 	color:#844b0c;
 	font-size:12px;
 	text-align:center;
+	padding: 3px 0 0;
 }
 #footer a {
-		color:#844b0c;
-		text-decoration: underline;
+	color:#844b0c;
 }
 
 #headerright {
 	float:right;
 	margin-top:0px;	
 }
+ul#secondary {
+	text-align:right;
+	margin: 0 0px 20px 0 ;
+	white-space: nowrap;
+}
 
+#secondary li {
+	margin-left:10px;
+}
+
+#secondary a { 
+	font-family: arial,sans-serif;
+	color: #7e4200;
+	font-size: 10px;	
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing:1px;
+}
+#secondary a:hover { 	
+	text-decoration: underline;
+}
 
 ul#subnavlist {
 	text-align:left;
-	margin: 30px 0 0 -10px ;
-	padding: 0 0 0 0;	
+	margin: 30px 0 0 -10px ;	
 	white-space: nowrap;	
 }
 ul#subnavlist li {
 	line-height:30px;
 	height:30px;
-	margin: 0px 0px 0px 0px;
-	padding:0px 0px 0px 0px;	
-	list-style-type:none;
 	background: #dcdcdc none;
 	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
 	background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
 	-moz-border-radius: 8px;
 	border-radius: 8px;
+	display: block;
 }
 ul#subnavlist li a {
 	font-family: arial,sans-serif;
@@ -114,21 +142,21 @@ ul#subnavlist li a {
 	font-size: 12px;	
 	text-decoration: none;
 	text-transform: uppercase;
-	width:230px;
 	display: block;	
-	padding-left: 8px;
+	text-indent: 8px;
 	letter-spacing:1px;
 
 }
-ul#subnavlist li a:hover {
+ul#subnavlist li:hover {
 	background: #e8ddd1 none;
 	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e8ddd1));
 	background: -moz-linear-gradient(top,  #fff,  #e8ddd1);
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	color:#7e4200;
-	
 }
+ul#subnavlist li:hover a {
+	color:#7e4200;
+}
+
+/* ??? */
 #sub {
 	background-color: #faece0;
 	padding: 10px 0px 10px 0px;	
@@ -138,18 +166,16 @@ ul#subnavlist li a:hover {
 #sub ul {
 		
 }
+/* ??? */
+
 ul#navlist {
 	text-align:center;
-	margin: 0 0 0 0 ;
-	padding: 0 0 0 0;
-	white-space: nowrap;
+	white-space: nowrap;	
+	padding: 5px 0;
 }
 
 #navlist li {
-	display: inline;
-	list-style-type: none;
-	margin-left:10px;
-	margin-right:10px;
+	margin: 0 10px;
 }
 
 #navlist a { 
@@ -165,50 +191,21 @@ ul#navlist {
 
 }
 
-ul#secondary {
-	text-align:right;
-	margin: 0 0px 20px 0 ;
-	padding: 0 0 0 0;
-	white-space: nowrap;
-}
+/* styles */
 
-#secondary li {
-	display: inline;
-	list-style-type: none;
-	margin-left:10px;
-}
-
-#secondary a { 
-	font-family: arial,sans-serif;
-	color: #7e4200;
-	font-size: 10px;	
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing:1px;
-}
-#secondary a:hover { 	
-	text-decoration: underline;
-
-}
 span.bold {
 	font-weight: bold;	
-}
-ul{
-	margin-top:0px;
 }
 ul li {
 	font-family: arial,sans-serif;
 	color: #454545;
 	font-size: 12px;
 	list-style-position: inside;
-	}
-
-
+}
 p {
 	font-size:12px;
 	color: #464646;
 	line-height: 18px;
-	text-align: justify;
 }
 p.intro {
 	font-size:18px;
@@ -222,25 +219,22 @@ p.quote {
 	font-style:italic;
 	color: #844b0c;
 	line-height: 30px;
-	text-align:left;
 		
 }
-
 #item p {
 	font-size:11px;
-	text-align:left;
 }
 
-
-.align-left { float:left; margin: 0 15px 15px 0; } 
-
+.align-left { 
+	float:left; 
+	margin: 0 15px 15px 0; 
+} 
 h1 {
 	font-size:30px;
 	font-weight:normal;
 	color: #464646;
 	margin-top:0px;
 }
-
 h2{
 	font-size:18px;
 	font-weight:normal;
@@ -262,15 +256,13 @@ input.search {
 	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #d5c2ad;
-	width:195px;
+	width:200px;
 	height:18px;	
-	padding-left:5px;
+	text-indent:5px;
 }
 
+/* HOME */
 
-.home {
-	padding: 20px 0 10px;
-}
 .bottle {
 	width: 240px;
 	height: 736px;
@@ -317,7 +309,7 @@ input.search {
 }
 
 
-
+/* CONTACT */
 
 .contact {
 	clear: both;
@@ -375,19 +367,18 @@ fieldset {
 	padding: 0 0 0 0;
 }
 
-.sitemap {
-	clear: both;
-}
-.sitemap ul {
+/* SITEMAP */
+
+.portal-sitemap ul {
 	list-style: square outside;
 
 	margin: 0;
 }
-.sitemap ul li {
+.portal-sitemap ul li {
 	color: #8a8888;	margin: 4px 0;
 	font-family: arial;
 }
-.sitemap ul li a {
+.portal-sitemap ul li a {
 	color: #454545;
 }
 
