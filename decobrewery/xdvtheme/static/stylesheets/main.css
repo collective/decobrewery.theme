@@ -433,4 +433,11 @@ fieldset.brewery {
 	color: #464646;
 	line-height: 24px;
 }
-
+#content .visualHighlight {
+       font-size:30px;
+        font-weight:bold;
+        font-style:italic;
+        color: #844b0c;
+        line-height: 30px;
+background: transparent;
+}
