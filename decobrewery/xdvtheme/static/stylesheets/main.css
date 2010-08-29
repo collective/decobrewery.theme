@@ -287,12 +287,16 @@ input.search {
 	background: url(../images/green.png) no-repeat 50% 50%;
 }
 .bottle-content {
-	margin: 70px 10px 0;
+	margin: 0;
 	height: 258px;
 	width: 220px;
 	position: absolute;
 }
+.bottle-content img {
+	padding: 0 0 0 36px;
+}
 .bottle-bg {
+	margin: 80px 0 0 0;
 	background: #000 none;
 	opacity: 0.62;
 }
@@ -388,4 +392,9 @@ fieldset.brewery {
 	color: #454545;
 }
 
-
+.beerListing h2 a {
+	font-size: 90%;
+	font-weight: bold;
+	color: #262626;
+	text-decoration: none;
+}
