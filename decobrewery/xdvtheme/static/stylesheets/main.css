@@ -69,6 +69,7 @@ min-height: 342px;
 	float: left;
 	background: #ffffff;	
 	min-height: 342px;
+	font-size: 80%;
 }
 #portal-column-two {
 	width: 190px;
@@ -76,6 +77,7 @@ min-height: 342px;
 	float: right;
 	background: #fff;
 	min-height: 342px;	
+	font-size: 80%;
 }
 #column-content {
 	margin: 0 210px 20px 270px;
