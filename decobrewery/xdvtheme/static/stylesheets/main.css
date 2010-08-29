@@ -59,7 +59,7 @@ min-height: 342px;
 }
 	
 		
-#column01 {
+#portal-column-one {
 	width: 230px;
 	margin: 0px 20px;
 	float: left;
@@ -67,14 +67,14 @@ min-height: 342px;
 	min-height: 342px;
 
 }
-#column03 {
+#portal-column-two {
 	width: 190px;
 	margin: 0px 0px 0px 20px;
 	float: right;
 	background: #fff;
 	min-height: 342px;	
 }
-#column02 {
+#portal-column-content {
 	margin: 0 210px 0 270px;
 }
 #item {
