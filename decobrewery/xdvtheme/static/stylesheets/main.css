@@ -261,6 +261,12 @@ input.search {
 	text-indent:5px;
 }
 
+/* backhacks */
+
+#column02 .field {
+	clear: none;
+}
+
 /* HOME */
 
 .bottle {
@@ -314,11 +320,11 @@ input.search {
 .contact {
 	clear: both;
 }
-form {
+form.brewery {
 	color: #717171;
 	width: 320px;
 }
-fieldset {
+fieldset.brewery {
 	border: 1px solid #7E4200;
 	-moz-border-radius: 14px;
 }
