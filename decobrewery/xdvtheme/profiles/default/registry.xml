@@ -118,7 +118,7 @@
       </value_type>
     </field>
     <value>
-      <element>^/Plone/.+$|python://decobrewery.xdvtheme/static/detailpage.html|python://decobrewery.xdvtheme/rules.xml</element>
+      <element>^/Plone/.+$ python://decobrewery.xdvtheme/static/detailpage.html python://decobrewery.xdvtheme/rules.xml</element>
     </value>
   </record>
 </registry>
