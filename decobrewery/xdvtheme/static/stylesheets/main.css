@@ -26,6 +26,10 @@ body {
 	background-color: #ffffff;
 }
 
+a:link,
+a:visited {
+	color: #844b0c;
+}
 .noScreen {
 	display: none;
 }
@@ -61,21 +65,20 @@ min-height: 342px;
 		
 #portal-column-one {
 	width: 230px;
-	margin: 0px 20px;
+	margin: 0px 20px 20px 0;
 	float: left;
 	background: #ffffff;	
 	min-height: 342px;
-
 }
 #portal-column-two {
 	width: 190px;
-	margin: 0px 0px 0px 20px;
+	margin: 0px 0px 20px 20px;
 	float: right;
 	background: #fff;
 	min-height: 342px;	
 }
 #column-content {
-	margin: 0 210px 0 270px;
+	margin: 0 210px 20px 270px;
 }
 #item {
 	margin-bottom:40px;	
@@ -239,7 +242,6 @@ h2{
 	font-size:18px;
 	font-weight:normal;
 	color: #464646;
-	margin-bottom:-10px;
 }
 h3 {
 	font-size:12px;
@@ -397,4 +399,13 @@ fieldset.brewery {
 	font-weight: bold;
 	color: #262626;
 	text-decoration: none;
+}
+
+.beerListing img {
+        float: left;
+	margin: 6px 1em 0 0;
+}
+
+.beerListing {
+        margin: 0 0 10px 0;
 }
