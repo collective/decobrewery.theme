@@ -423,3 +423,14 @@ fieldset.brewery {
 .portletLogin img {
 	display: none;
 }
+
+.portletNavigationTree img {
+	display: none;
+}
+.documentDescription {
+	font-size:18px;
+	font-weight:normal;
+	color: #464646;
+	line-height: 24px;
+}
+
