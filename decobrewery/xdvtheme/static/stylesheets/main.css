@@ -411,3 +411,7 @@ fieldset.brewery {
 .beerListing {
         margin: 0 0 10px 0;
 }
+
+.attachment-tile li {
+	display: block;
+}
