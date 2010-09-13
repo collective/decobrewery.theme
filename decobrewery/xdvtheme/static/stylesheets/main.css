@@ -131,7 +131,7 @@ u.navTreeLevel0 {
 	margin: 30px 0 0 -10px ;	
 	white-space: nowrap;	
 }
-ul.navTreeLevel0 li {
+ul.navTreeLevel0 li a {
 	line-height:30px;
 	height:30px;
 	background: #dcdcdc none;
@@ -152,7 +152,7 @@ ul.navTreeLevel0 li a {
 	letter-spacing:1px;
 
 }
-ul.navTreeLevel0 li:hover {
+ul.navTreeLevel0 li a:hover {
 	background: #e8ddd1 none;
 	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e8ddd1));
 	background: -moz-linear-gradient(top,  #fff,  #e8ddd1);
