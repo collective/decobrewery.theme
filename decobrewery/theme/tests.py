@@ -9,7 +9,7 @@ from Products.PloneTestCase import PloneTestCase as ptc
 from Products.PloneTestCase.layer import PloneSite
 ptc.setupPloneSite()
 
-import decobrewery.xdvtheme
+import decobrewery.theme
 
 
 class TestCase(ptc.PloneTestCase):
@@ -19,7 +19,7 @@ class TestCase(ptc.PloneTestCase):
         @classmethod
         def setUp(cls):
             fiveconfigure.debug_mode = True
-            ztc.installPackage(decobrewery.xdvtheme)
+            ztc.installPackage(decobrewery.theme)
             fiveconfigure.debug_mode = False
 
         @classmethod
@@ -32,21 +32,21 @@ def test_suite():
 
         # Unit tests
         #doctestunit.DocFileSuite(
-        #    'README.txt', package='decobrewery.xdvtheme',
+        #    'README.txt', package='decobrewery.theme',
         #    setUp=testing.setUp, tearDown=testing.tearDown),
 
         #doctestunit.DocTestSuite(
-        #    module='decobrewery.xdvtheme.mymodule',
+        #    module='decobrewery.theme.mymodule',
         #    setUp=testing.setUp, tearDown=testing.tearDown),
 
 
         # Integration tests that use PloneTestCase
         #ztc.ZopeDocFileSuite(
-        #    'README.txt', package='decobrewery.xdvtheme',
+        #    'README.txt', package='decobrewery.theme',
         #    test_class=TestCase),
 
         #ztc.FunctionalDocFileSuite(
-        #    'browser.txt', package='decobrewery.xdvtheme',
+        #    'browser.txt', package='decobrewery.theme',
         #    test_class=TestCase),
 
         ])

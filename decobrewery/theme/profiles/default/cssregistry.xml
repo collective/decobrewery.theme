@@ -2,7 +2,7 @@
 <object name="portal_css">
 
   <stylesheet title=""
-              id="++resource++decobrewery.static/stylesheets/main.css"
+              id="++theme++decobrewery.theme/stylesheets/main.css"
               media="screen"
               rel="stylesheet"
               rendering="link"
@@ -10,7 +10,7 @@
               compression="safe"
               cookable="True"
               enabled="1"
-              expression="request/HTTP_X_XDV | nothing"
+              expression="request/HTTP_X_THEME_ENABLED | nothing"
               applyPrefix="True" />
 
 </object>

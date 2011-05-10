@@ -4,41 +4,23 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="decobrewery.xdvtheme">
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="decobrewery.theme">
 
   <five:registerPackage package="." initialize=".initialize" />
 
-  <include package="collective.xdv" />
-  <include package="plonetheme.wireframe" />
+  <include package="plone.app.theming" />
 
-  <i18n:registerTranslations directory="locales" />
-
-  <interface
-      interface=".interfaces.IThemeSpecific"
-      type="zope.publisher.interfaces.browser.IBrowserSkinType"
-      name="DecoBrewery"
-      />
-
-  <browser:resourceDirectory
-      name="decobrewery.static"
+  <plone:static
       directory="static"
-      layer=".interfaces.IThemeSpecific"
-      />
+      type="theme" />
 
   <genericsetup:registerProfile
       name="default"
-      title="Deco Brewery XDV Theme"
+      title="Deco Brewery Theme"
       directory="profiles/default"
       description='Extension profile for the "Deco Brewery" Plone theme.'
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-
-  <genericsetup:importStep
-      name="decobrewery.xdvtheme.various"
-      title="Deco Brewery: miscellaneous import steps"
-      description="Various import steps that are not handled by GS import/export handlers."
-      handler="decobrewery.xdvtheme.setuphandlers.setupVarious">
-    <depends name="skins"/>
-  </genericsetup:importStep>
 
 </configure>

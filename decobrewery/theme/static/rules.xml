@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rules xmlns="http://namespaces.plone.org/xdv">
-    <replace content='/html/head/title' theme='/html/head/title' />
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <append  content="/html/head/base"   theme="/html/head" />
-    <append  content="/html/head/meta"   theme="/html/head" />
-    <append  content='/html/head/style'  theme='/html/head' />
-    <append  content='/html/head/script' theme='/html/head' />
-    <append  content="/html/head/link"   theme="/html/head" />
+  <replace content='/html/head/title' theme='/html/head/title' />
 
-    <drop if-content="/html/head/style"  theme="/html/head/style" />
-    <drop if-content="/html/head/script" theme="/html/head/script" />
-    <drop if-content="/html/head/link"   theme="/html/head/link" />
+  <append  content="/html/head/base"   theme="/html/head" />
+  <append  content="/html/head/meta"   theme="/html/head" />
+  <append  content='/html/head/style'  theme='/html/head' />
+  <append  content='/html/head/script' theme='/html/head' />
+  <append  content="/html/head/link"   theme="/html/head" />
 
-    <!-- Copy over the id/class attributes on the body tag, this is important
-         for per-section styling -->
-    <prepend content="/html/body/@class" theme="/html/body" />
-    <prepend content="/html/body/@id"    theme="/html/body" />
-    <prepend content="/html/body/@dir"   theme="/html/body" />
+  <drop if-content="/html/head/style"  theme="/html/head/style" />
+  <drop if-content="/html/head/script" theme="/html/head/script" />
+  <drop if-content="/html/head/link"   theme="/html/head/link" />
 
-    <!-- Site actions -->
-    <copy content="//*[@id='portal-siteactions']/li" theme="//*[@id='secondary']" />
+  <!-- Copy over the id/class attributes on the body tag, this is important
+       for per-section styling -->
+  <prepend content="/html/body/@class" theme="/html/body" />
+  <prepend content="/html/body/@id"    theme="/html/body" />
+  <prepend content="/html/body/@dir"   theme="/html/body" />
 
-    <!-- Global navigation -->
-    <copy content='//*[@id="portal-globalnav"]/li' theme='//*[@id="navlist"]' />
+  <!-- Site actions -->
+  <copy content="//*[@id='portal-siteactions']/li" theme="//*[@id='secondary']" />
 
-    <!-- Breadcrumbs -->
-    <copy content='//*[@id="portal-breadcrumbs"]/*' theme='//*[@id="breadcrumbs"]' />
+  <!-- Global navigation -->
+  <copy content='//*[@id="portal-globalnav"]/li' theme='//*[@id="navlist"]' />
 
-    <!-- Document Content -->
-    <copy content="//*[@id='content']/*" theme="//*[@id='content']" />
-    <before content="//*[@id='edit-bar']" theme="//*[@id='frame']" />
+  <!-- Breadcrumbs -->
+  <copy content='//*[@id="portal-breadcrumbs"]/*' theme='//*[@id="breadcrumbs"]' />
 
-    <!-- Columns -->
-    <copy content="//*[@id='portal-column-one']/*" theme="//*[@id='portal-column-one']" />
-    <copy content="//*[@id='portal-column-two']/*" theme="//*[@id='portal-column-two']" />
+  <!-- Document Content -->
+  <copy content="//*[@id='content']/*" theme="//*[@id='content']" />
+  <before content="//*[@id='edit-bar']" theme="//*[@id='frame']" />
 
-    <!-- Footer -->
-    <append content="//*[@id='kss-spinner']" theme="/html/body" />
+  <!-- Columns -->
+  <copy content="//*[@id='portal-column-one']/*" theme="//*[@id='portal-column-one']" />
+  <copy content="//*[@id='portal-column-two']/*" theme="//*[@id='portal-column-two']" />
+
+  <!-- Footer -->
+  <append content="//*[@id='kss-spinner']" theme="/html/body" />
 
 </rules>
