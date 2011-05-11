@@ -3,9 +3,9 @@ import os
 
 version = '0.1'
 
-setup(name='decobrewery.xdvtheme',
+setup(name='decobrewery.theme',
       version=version,
-      description="The Deco Brewery XDV Theme",
+      description="Deco Brewery Theme",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
@@ -23,10 +23,13 @@ setup(name='decobrewery.xdvtheme',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'collective.xdv',
-          'plonetheme.wireframe',
+          'plone.app.theming',
       ],
       entry_points="""
+      # -*- Entry points: -*-
+
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       setup_requires=["PasteScript"],
       paster_plugins=["ZopeSkel"],

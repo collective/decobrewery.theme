@@ -1,11 +1,11 @@
-decobrewery.xdvtheme Installation
+decobrewery.theme Installation
 --------------------------
 
-To install decobrewery.xdvtheme into the global Python environment (or a workingenv),
+To install decobrewery.theme into the global Python environment (or a workingenv),
 using a traditional Zope 2 instance, you can do this:
 
 * When you're reading this you have probably already run 
-  ``easy_install decobrewery.xdvtheme``. Find out how to install setuptools
+  ``easy_install decobrewery.theme``. Find out how to install setuptools
   (and EasyInstall) here:
   http://peak.telecommunity.com/DevCenter/EasyInstall
 
@@ -16,11 +16,11 @@ using a traditional Zope 2 instance, you can do this:
 
 into your Zope instance.
 
-* Create a file called ``decobrewery.xdvtheme-configure.zcml`` in the
+* Create a file called ``decobrewery.theme-configure.zcml`` in the
   ``/path/to/instance/etc/package-includes`` directory.  The file
   should only contain this::
 
-    <include package="decobrewery.xdvtheme" />
+    <include package="decobrewery.theme" />
 
 .. _pythonproducts: http://plone.org/products/pythonproducts
 
@@ -28,13 +28,13 @@ into your Zope instance.
 Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance
 recipe to manage your project, you can do this:
 
-* Add ``decobrewery.xdvtheme`` to the list of eggs to install, e.g.:
+* Add ``decobrewery.theme`` to the list of eggs to install, e.g.:
 
     [buildout]
     ...
     eggs =
         ...
-        decobrewery.xdvtheme
+        decobrewery.theme
        
 * Tell the plone.recipe.zope2instance recipe to install a ZCML slug:
 
@@ -42,7 +42,7 @@ recipe to manage your project, you can do this:
     recipe = plone.recipe.zope2instance
     ...
     zcml =
-        decobrewery.xdvtheme
+        decobrewery.theme
       
 * Re-run buildout, e.g. with:
 
